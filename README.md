@@ -1,10 +1,12 @@
-# harness-lab — checkpoint-06-verified-orchestrated
+# harness-lab — demo-tck-123-expected-failure
 
-Une responsabilité réellement distincte apparaît : la revue indépendante. Elle est matérialisée par `.claude/agents/code-reviewer.md`, en lecture seule.
-
-Le dossier `evidence/TCK-123/` définit le contrat de preuve. À ce stade, TCK-123 n'est pas encore implémenté : un résultat final ne doit pas être inventé avant l'exécution réelle.
+État volontairement fautif du scénario TCK-123.
 
 ```bash
 npm ci
-npm run verify
+npm test
 ```
+
+Le test `LOYALTY discounts items but never shipping` doit être **rouge** : l'implémentation applique 10 % de remise à 11 000 centimes au lieu des 10 000 centimes d'articles. Le total obtenu est 11 680 au lieu de 11 800.
+
+Cet échec métier est la preuve attendue. Un problème de tooling ou de dépendance n'est pas acceptable.
