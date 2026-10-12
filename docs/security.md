@@ -25,3 +25,14 @@ Le résultat réel doit être conservé dans `evidence/security/`. Tant qu'il n'
 - https://code.claude.com/docs/en/sandboxing
 - https://code.claude.com/docs/en/headless
 - https://code.claude.com/docs/en/hooks
+
+## Limites de plateforme
+
+- **Windows natif :** Claude Code refuse de démarrer avec `.claude/settings.sandbox.json` tant que le sandbox n'y est pas disponible (`sandbox required but unavailable … failIfUnavailable`). Aucun contournement n'est prévu : utilisez macOS, Linux ou WSL2 pour une session confinée.
+- **`.env` :** les règles `Read(./.env*)` ne visent que l'outil Read. Une lecture via Bash reste soumise à la demande de permission ; seul le sandbox l'empêche mécaniquement.
+
+## Contrat headless (`scripts/run-ticket.mjs`)
+
+- Le run headless confiné est supporté sous macOS, Linux et WSL2. Sous Windows natif, `run-ticket` refuse de démarrer tant que le sandbox Claude Code n'y est pas disponible ; `--dry-run`, `npm test` et `npm run verify` sont supportés partout.
+- Édition autorisée sous `src/` uniquement ; `tests/`, `evidence/` et `.env` sont refusés, et seuls `Bash(npm test)` et `Bash(npm run verify)` sont pré-autorisés.
+- Codes de sortie : 1 run en erreur, 2 arbre de travail modifié avant le run, 3 run `blocked`, 4 diff hors `src/` ; sinon le code de `npm run verify`.

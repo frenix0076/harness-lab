@@ -10,3 +10,5 @@ Présent à ce stade :
 - `approval.md` : gate de plan documenté comme fixture pédagogique, pas comme preuve runtime Claude Code.
 
 Le paquet sera complété après l'état rouge puis la correction.
+
+Régénération explicite : `npm run evidence:tck-123`. `npm run verify` ne modifie jamais ce paquet.

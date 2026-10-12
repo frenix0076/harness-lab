@@ -1,4 +1,4 @@
-import { access, mkdir, open, readdir } from "node:fs/promises";
+import { access, readdir } from "node:fs/promises";
 import { join } from "node:path";
 import { spawnSync } from "node:child_process";
 
@@ -25,16 +25,5 @@ if (await exists("scripts/validate-static.mjs")) {
 
 run(process.execPath, ["--experimental-strip-types", "--test", ...testFiles]);
 
-if (await exists("scripts/json-test-reporter.mjs") && await exists("evidence/TCK-123")) {
-  await mkdir("evidence/TCK-123", { recursive: true });
-  const output = await open("evidence/TCK-123/tests.json", "w");
-  try {
-    run(process.execPath, [
-      "--experimental-strip-types", "--test",
-      "--test-reporter=./scripts/json-test-reporter.mjs",
-      ...testFiles,
-    ], { stdio: ["inherit", output.fd, "inherit"] });
-  } finally { await output.close(); }
-}
-
+// Read-only on purpose: committed evidence is regenerated only by `npm run evidence:tck-123`.
 console.log("verification complète : PASS");

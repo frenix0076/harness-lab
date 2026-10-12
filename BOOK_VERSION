@@ -1,6 +1,9 @@
 MAITRISER_LE_HARNESS_ENGINEERING
 edition=2026
-companion_contract=book-exact-v3
-course_final_tag=checkpoint-08-professional
-red_demo_tag=demo-tck-123-expected-failure
-green_demo_tag=demo-tck-123-corrected
+companion_contract=book-exact-v4
+course_tag_prefix=book-v4/
+course_final_tag=book-v4/checkpoint-08-professional
+red_demo_tag=book-v4/demo-tck-123-expected-failure
+green_demo_tag=book-v4/demo-tck-123-corrected
+previous_contract=book-exact-v3
+previous_course_final_tag=checkpoint-08-professional

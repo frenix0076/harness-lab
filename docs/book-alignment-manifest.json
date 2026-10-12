@@ -1,14 +1,428 @@
 {
   "bookEdition": "2026",
-  "courseFinalTag": "checkpoint-08-professional",
+  "companionContract": "book-exact-v4",
+  "courseFinalTag": "book-v4/checkpoint-08-professional",
   "contracts": [
-    {"id":"CP01-NO-CUSTOMER-TYPE","checkpoint":"checkpoint-01-no-harness","path":"src/domain/types.ts","mustNotContain":["customerType","CustomerType","discountCents"]},
-    {"id":"CP02-PLAN-NO-FUTURE-SPOILER","checkpoint":"checkpoint-02-minimal","path":"docs/stories/TCK-123/plan.md","mustContain":["PriceInput","npm run verify"],"mustNotContain":["confondre `totalBeforeTax`","inclure la livraison dans la remise"]},
-    {"id":"CP05-HOOK","checkpoint":"checkpoint-05-capabilities","paths":[".claude/skills/plan/SKILL.md",".claude/hooks/post-edit-verify.mjs","docs/capabilities.md"]},
-    {"id":"CP06-EVIDENCE","checkpoint":"checkpoint-06-verified-orchestrated","paths":[".claude/agents/code-reviewer.md","evidence/TCK-123/tests.json","evidence/TCK-123/verify.log","evidence/TCK-123/review.md"]},
-    {"id":"CP07-SECURITY","checkpoint":"checkpoint-07-secure","paths":[".claude/settings.sandbox.json","docs/security.md","evidence/security/README.md"],"mustNotHavePaths":["scripts/run-ticket.mjs",".github/workflows/harness-review.yml"]},
-    {"id":"TCK-123-RED","checkpoint":"demo-tck-123-expected-failure","path":"src/domain/pricing.ts","mustContain":["Math.round(totalBeforeTax * 0.10)","discountedItemsCents"]},
-    {"id":"TCK-123-GREEN","checkpoint":"demo-tck-123-corrected","path":"src/domain/pricing.ts","mustContain":["Math.round(input.itemsSubtotalCents * 0.10)"],"paths":["evidence/TCK-123/tests.json","evidence/TCK-123/verify.log"]},
-    {"id":"CP08-PROFESSIONAL","checkpoint":"checkpoint-08-professional","paths":["scripts/run-ticket.mjs",".github/workflows/harness-review.yml","observability/schema.json","observability/events.jsonl","INCIDENT-RUNBOOK.md","evidence/TCK-123/closure.md"]}
+    {
+      "id": "CP01-NO-CUSTOMER-TYPE",
+      "checkpoint": "checkpoint-01-no-harness",
+      "path": "src/domain/types.ts",
+      "mustNotContain": [
+        "customerType",
+        "CustomerType",
+        "discountCents"
+      ]
+    },
+    {
+      "id": "CP02-PLAN-NO-FUTURE-SPOILER",
+      "checkpoint": "checkpoint-02-minimal",
+      "path": "docs/stories/TCK-123/plan.md",
+      "mustContain": [
+        "PriceInput",
+        "npm run verify"
+      ],
+      "mustNotContain": [
+        "confondre `totalBeforeTax`",
+        "inclure la livraison dans la remise"
+      ]
+    },
+    {
+      "id": "CP05-HOOK",
+      "checkpoint": "checkpoint-05-capabilities",
+      "paths": [
+        ".claude/skills/plan/SKILL.md",
+        ".claude/hooks/post-edit-verify.mjs",
+        "docs/capabilities.md"
+      ]
+    },
+    {
+      "id": "CP06-EVIDENCE",
+      "checkpoint": "checkpoint-06-verified-orchestrated",
+      "paths": [
+        ".claude/agents/code-reviewer.md",
+        "evidence/TCK-123/tests.json",
+        "evidence/TCK-123/verify.log",
+        "evidence/TCK-123/review.md"
+      ]
+    },
+    {
+      "id": "CP07-SECURITY",
+      "checkpoint": "checkpoint-07-secure",
+      "paths": [
+        ".claude/settings.sandbox.json",
+        "docs/security.md",
+        "evidence/security/README.md"
+      ],
+      "mustNotHavePaths": [
+        "scripts/run-ticket.mjs",
+        ".github/workflows/harness-review.yml"
+      ]
+    },
+    {
+      "id": "TCK-123-RED",
+      "checkpoint": "demo-tck-123-expected-failure",
+      "path": "src/domain/pricing.ts",
+      "mustContain": [
+        "Math.round(totalBeforeTax * 0.10)",
+        "discountedItemsCents"
+      ]
+    },
+    {
+      "id": "TCK-123-GREEN",
+      "checkpoint": "demo-tck-123-corrected",
+      "path": "src/domain/pricing.ts",
+      "mustContain": [
+        "Math.round(input.itemsSubtotalCents * 0.10)"
+      ],
+      "paths": [
+        "evidence/TCK-123/tests.json",
+        "evidence/TCK-123/verify.log"
+      ]
+    },
+    {
+      "id": "CP08-PROFESSIONAL",
+      "checkpoint": "checkpoint-08-professional",
+      "paths": [
+        "scripts/run-ticket.mjs",
+        ".github/workflows/harness-review.yml",
+        "observability/schema.json",
+        "observability/events.jsonl",
+        "INCIDENT-RUNBOOK.md",
+        "evidence/TCK-123/closure.md"
+      ]
+    }
+  ],
+  "v3Frozen": {
+    "checkpoint-01-no-harness": "a18edc99f80dc3c7a189acad130605a159d36f12",
+    "checkpoint-02-minimal": "5719fa73968fd90444ceb3921ed4bd6ea68a86e7",
+    "checkpoint-03-runtime-structured": "6f3cc1fb67a74fcfb313e727ea95aa034e1b5fc2",
+    "checkpoint-04-information-disciplined": "132abbff04db6907cc1eab0118896ebfe6e18f4a",
+    "checkpoint-05-capabilities": "b7f7de7adce9800776d0209c7f2b096f1dc520ed",
+    "checkpoint-06-verified-orchestrated": "705a8a79c9da81d325f901c6ea723e90ec1b7ab5",
+    "checkpoint-07-secure": "c402bcd5df5c50bd9f1396983efd416b11745ad5",
+    "demo-tck-123-expected-failure": "f2fedd974241611a0fd6a5c37a81b73af51db4da",
+    "demo-tck-123-corrected": "88e336fd1838cc6aa2703ce473f6a8254e553174",
+    "checkpoint-08-professional": "1310de1e5b56c058762ada5ad6e7fe0b6c2f126f"
+  },
+  "v4": {
+    "prefix": "book-v4/",
+    "aliases": [
+      "checkpoint-01-no-harness",
+      "checkpoint-02-minimal",
+      "checkpoint-03-runtime-structured",
+      "checkpoint-04-information-disciplined"
+    ],
+    "delta": {
+      "checkpoint-05-capabilities": [
+        ".claude/hooks/post-edit-verify.mjs",
+        ".claude/skills/plan/SKILL.md",
+        ".claude/skills/plan-ticket/SKILL.md",
+        "docs/capabilities.md",
+        "scripts/validate-static.mjs"
+      ],
+      "checkpoint-06-verified-orchestrated": [
+        ".claude/hooks/post-edit-verify.mjs",
+        ".claude/skills/plan/SKILL.md",
+        ".claude/skills/plan-ticket/SKILL.md",
+        "docs/capabilities.md",
+        "scripts/validate-static.mjs",
+        "evidence/TCK-123/README.md",
+        "package.json",
+        "scripts/generate-evidence.mjs",
+        "scripts/verify.mjs"
+      ],
+      "checkpoint-07-secure": [
+        ".claude/hooks/post-edit-verify.mjs",
+        ".claude/skills/plan/SKILL.md",
+        ".claude/skills/plan-ticket/SKILL.md",
+        "docs/capabilities.md",
+        "scripts/validate-static.mjs",
+        "evidence/TCK-123/README.md",
+        "package.json",
+        "scripts/generate-evidence.mjs",
+        "scripts/verify.mjs",
+        "docs/security.md"
+      ],
+      "demo-tck-123-expected-failure": [
+        ".claude/hooks/post-edit-verify.mjs",
+        ".claude/skills/plan/SKILL.md",
+        ".claude/skills/plan-ticket/SKILL.md",
+        "docs/capabilities.md",
+        "scripts/validate-static.mjs",
+        "evidence/TCK-123/README.md",
+        "package.json",
+        "scripts/generate-evidence.mjs",
+        "scripts/verify.mjs",
+        "docs/security.md"
+      ],
+      "demo-tck-123-corrected": [
+        ".claude/hooks/post-edit-verify.mjs",
+        ".claude/skills/plan/SKILL.md",
+        ".claude/skills/plan-ticket/SKILL.md",
+        "docs/capabilities.md",
+        "scripts/validate-static.mjs",
+        "evidence/TCK-123/README.md",
+        "package.json",
+        "scripts/generate-evidence.mjs",
+        "scripts/verify.mjs",
+        "docs/security.md",
+        "evidence/TCK-123/tests.json",
+        "evidence/TCK-123/verify.log",
+        "tests/checkout.test.ts",
+        "tests/pricing.test.ts"
+      ],
+      "checkpoint-08-professional": [
+        ".claude/hooks/post-edit-verify.mjs",
+        ".claude/skills/plan/SKILL.md",
+        ".claude/skills/plan-ticket/SKILL.md",
+        "docs/capabilities.md",
+        "scripts/validate-static.mjs",
+        "evidence/TCK-123/README.md",
+        "package.json",
+        "scripts/generate-evidence.mjs",
+        "scripts/verify.mjs",
+        "docs/security.md",
+        "evidence/TCK-123/tests.json",
+        "evidence/TCK-123/verify.log",
+        "tests/checkout.test.ts",
+        "tests/pricing.test.ts",
+        ".github/workflows/harness-review.yml",
+        "observability/events.jsonl",
+        "scripts/run-ticket.mjs"
+      ]
+    },
+    "contracts": [
+      {
+        "id": "V4-CP05-HOOK",
+        "checkpoint": "book-v4/checkpoint-05-capabilities",
+        "path": ".claude/hooks/post-edit-verify.mjs",
+        "mustContain": [
+          "process.exit(2)",
+          "CLAUDE_PROJECT_DIR",
+          "process.stderr.write"
+        ],
+        "paths": [
+          ".claude/skills/plan-ticket/SKILL.md"
+        ],
+        "mustNotHavePaths": [
+          ".claude/skills/plan/SKILL.md"
+        ]
+      },
+      {
+        "id": "V4-CP05-CAPABILITIES",
+        "checkpoint": "book-v4/checkpoint-05-capabilities",
+        "path": "docs/capabilities.md",
+        "mustContain": [
+          ".claude/skills/plan-ticket/SKILL.md"
+        ]
+      },
+      {
+        "id": "V4-CP06-EVIDENCE",
+        "checkpoint": "book-v4/checkpoint-06-verified-orchestrated",
+        "path": "scripts/verify.mjs",
+        "mustNotContain": [
+          "tests.json"
+        ],
+        "paths": [
+          "scripts/generate-evidence.mjs"
+        ]
+      },
+      {
+        "id": "V4-CP06-SCRIPT",
+        "checkpoint": "book-v4/checkpoint-06-verified-orchestrated",
+        "path": "package.json",
+        "mustContain": [
+          "\"evidence:tck-123\""
+        ]
+      },
+      {
+        "id": "V4-CP07-SECURITY",
+        "checkpoint": "book-v4/checkpoint-07-secure",
+        "path": "docs/security.md",
+        "mustContain": [
+          "Windows natif"
+        ],
+        "mustNotContain": [
+          "Contrat headless"
+        ],
+        "mustNotHavePaths": [
+          "scripts/run-ticket.mjs",
+          ".github/workflows/harness-review.yml"
+        ]
+      },
+      {
+        "id": "V4-RED",
+        "checkpoint": "book-v4/demo-tck-123-expected-failure",
+        "path": "src/domain/pricing.ts",
+        "mustContain": [
+          "Math.round(totalBeforeTax * 0.10)"
+        ],
+        "sameAs": {
+          "ref": "demo-tck-123-expected-failure",
+          "paths": [
+            "src/domain/pricing.ts",
+            "tests/pricing.test.ts",
+            "tests/checkout.test.ts"
+          ]
+        }
+      },
+      {
+        "id": "V4-GREEN",
+        "checkpoint": "book-v4/demo-tck-123-corrected",
+        "path": "src/domain/pricing.ts",
+        "mustContain": [
+          "input.itemsSubtotalCents * 0.10"
+        ],
+        "sameAs": {
+          "ref": "demo-tck-123-corrected",
+          "paths": [
+            "src/domain/pricing.ts"
+          ]
+        }
+      },
+      {
+        "id": "V4-GREEN-REGRESSIONS",
+        "checkpoint": "book-v4/demo-tck-123-corrected",
+        "path": "tests/pricing.test.ts",
+        "mustContain": [
+          "LOYALTY discounts items but never shipping",
+          "LOYALTY discount and tax do not depend on shipping",
+          "every amount stays an integer number of cents"
+        ],
+        "mustNotContain": [
+          "rounds discount and tax"
+        ]
+      },
+      {
+        "id": "V4-GREEN-CHECKOUT",
+        "checkpoint": "book-v4/demo-tck-123-corrected",
+        "path": "tests/checkout.test.ts",
+        "mustContain": [
+          "checkout applies LOYALTY pricing end to end"
+        ]
+      },
+      {
+        "id": "V4-GREEN-EVIDENCE",
+        "checkpoint": "book-v4/demo-tck-123-corrected",
+        "path": "evidence/TCK-123/tests.json",
+        "mustContain": [
+          "\"pass\": 6",
+          "\"fail\": 0"
+        ]
+      },
+      {
+        "id": "V4-CP08-HEADLESS",
+        "checkpoint": "book-v4/checkpoint-08-professional",
+        "path": "scripts/run-ticket.mjs",
+        "mustContain": [
+          "resolveClaude",
+          "const EDITABLE_PREFIX = \"src/\"",
+          "Edit(./${EDITABLE_PREFIX}**)",
+          "Edit(./tests/**)",
+          "Edit(./evidence/**)",
+          "process.exit(3)",
+          "process.exit(4)"
+        ]
+      },
+      {
+        "id": "V4-CP08-CI",
+        "checkpoint": "book-v4/checkpoint-08-professional",
+        "path": ".github/workflows/harness-review.yml",
+        "mustContain": [
+          "push:"
+        ]
+      },
+      {
+        "id": "V4-CP08-SECURITY",
+        "checkpoint": "book-v4/checkpoint-08-professional",
+        "path": "docs/security.md",
+        "mustContain": [
+          "Contrat headless",
+          "WSL2"
+        ]
+      },
+      {
+        "id": "V4-CP08-EVENTS",
+        "checkpoint": "book-v4/checkpoint-08-professional",
+        "path": "observability/events.jsonl",
+        "mustContain": [
+          "book-v4/checkpoint-08-professional",
+          "book-v4/demo-tck-123-expected-failure"
+        ]
+      }
+    ],
+    "replay": {
+      "checkpoint-01-no-harness": {
+        "test": "pass",
+        "verify": "pass"
+      },
+      "checkpoint-02-minimal": {
+        "test": "pass",
+        "verify": "pass"
+      },
+      "checkpoint-03-runtime-structured": {
+        "test": "pass",
+        "verify": "pass"
+      },
+      "checkpoint-04-information-disciplined": {
+        "test": "pass",
+        "verify": "pass"
+      },
+      "checkpoint-05-capabilities": {
+        "test": "pass",
+        "verify": "pass"
+      },
+      "checkpoint-06-verified-orchestrated": {
+        "test": "pass",
+        "verify": "pass"
+      },
+      "checkpoint-07-secure": {
+        "test": "pass",
+        "verify": "pass"
+      },
+      "demo-tck-123-expected-failure": {
+        "test": "fail",
+        "verify": "fail",
+        "output": [
+          "11680",
+          "11800"
+        ]
+      },
+      "demo-tck-123-corrected": {
+        "test": "pass",
+        "verify": "pass"
+      },
+      "checkpoint-08-professional": {
+        "test": "pass",
+        "verify": "pass",
+        "dryRun": true
+      }
+    }
+  },
+  "companionPaths": [
+    "ALIGNMENT_MATRIX.md",
+    "BOOK_INDEX.md",
+    "BOOK_VERSION",
+    "README.md",
+    "package.json",
+    "docs/book-alignment-manifest.json",
+    "docs/maintainer",
+    "scripts/validate-book-alignment.mjs",
+    "scripts/replay-checkpoints.mjs"
+  ],
+  "courseForbiddenPaths": [
+    "ALIGNMENT_MATRIX.md",
+    "BOOK_INDEX.md",
+    "BOOK_VERSION",
+    "docs/book-alignment-manifest.json",
+    "docs/maintainer",
+    "scripts/validate-book-alignment.mjs",
+    "scripts/replay-checkpoints.mjs",
+    "evidence/runtime",
+    "PUBLISHING_MIGRATION.md",
+    "QA_REPO_ALIGNMENT.md",
+    "REPO_ALIGNMENT_PLAN.md",
+    "docs/book-alignment.md",
+    ".checkpoints.json"
   ]
 }

@@ -10,7 +10,7 @@ Points confirmés :
 - `--permission-prompts none` pour un run sans opérateur ;
 - `--allowedTools` pour préautoriser des règles précises ;
 - `--tools` pour restreindre les tools intégrés exposés ;
-- `--disallowedTools "mcp__*"` pour retirer les tools MCP de ce run ;
+- `--disallowedTools "mcp__*,Edit(./tests/**),Edit(./evidence/**),Read(./.env),Read(./.env.*)"` pour retirer les tools MCP et protéger tests, preuves et `.env` ;
 - `--settings .claude/settings.sandbox.json` pour appliquer le profil sandbox en plus des settings projet ;
 - `--setting-sources project` pour éviter que des settings utilisateur modifient silencieusement le contrat du laboratoire.
 

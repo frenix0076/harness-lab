@@ -1,3 +1,5 @@
+> **Document historique (pré-R5, book-exact-v3).** Il cite des tags antérieurs, dont `checkpoint-07-secure-automated` qui n'existe plus. Référence actuelle : `BOOK_INDEX.md` et `docs/maintainer/BOOK_EXACT_V4_VALIDATION.md`.
+
 # QA — dépôt corrigé vs livre
 
 Date: 2026-10-12
