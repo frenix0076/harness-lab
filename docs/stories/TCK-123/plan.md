@@ -1,9 +1,12 @@
 # Plan TCK-123
 
-1. Lire la spécification autoritative `spec.md`.
-2. Identifier le code et les tests concernés sans élargir le scope.
-3. Définir la preuve déterministe : la suite `npm test` doit couvrir la règle métier.
-4. Modifier uniquement ce qui est nécessaire à la règle de remise.
-5. Exécuter `npm run verify` avant de conclure.
+1. Ajouter un test prouvant que la remise LOYALTY porte uniquement sur les articles.
+2. Préserver le cas STANDARD comme régression.
+3. Modifier uniquement `src/domain/pricing.ts` si le contrat peut être fermé sans changer l'API.
+4. Exécuter `npm run verify`.
+5. Faire relire le diff et les preuves indépendamment du producteur.
 
-À ce checkpoint, le plan reste volontairement minimal : la revue indépendante sera introduite plus tard lorsqu'une responsabilité réellement distincte la justifiera.
+## Risques
+- inclure par erreur la livraison dans la base de remise ;
+- appliquer la taxe avant la remise ;
+- modifier le comportement STANDARD.

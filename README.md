@@ -1,8 +1,8 @@
-# harness-lab — checkpoint-05-capabilities
+# harness-lab — checkpoint-06-verified-orchestrated
 
-Le premier besoin de procédure réutilisable introduit `.claude/skills/plan/SKILL.md`. La preuve déterministe reste `scripts/verify.sh`.
+Une responsabilité réellement distincte apparaît : la revue indépendante. Elle est matérialisée par `.claude/agents/code-reviewer.md`, en lecture seule.
 
-Aucun hook, agent ou MCP n'est ajouté sans besoin : voir `docs/capabilities.md`.
+Le dossier `evidence/TCK-123/` définit le contrat de preuve. À ce stade, TCK-123 n'est pas encore implémenté : un résultat final ne doit pas être inventé avant l'exécution réelle.
 
 ```bash
 npm ci
