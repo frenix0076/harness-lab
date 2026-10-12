@@ -1,15 +1,10 @@
-# harness-lab — checkpoint-07-secure
+# harness-lab — demo-tck-123-expected-failure
 
-Le dépôt ajoute maintenant les frontières de sécurité introduites dans la Partie 7 :
-
-- permissions projet déjà présentes dans `.claude/settings.json` ;
-- profil sandbox strict dans `.claude/settings.sandbox.json` ;
-- procédure de preuve dans `docs/security.md` ;
-- dossier `evidence/security/` pour le test négatif runtime.
+État volontairement fautif de la Partie 8, construit **après** le checkpoint sécurité.
 
 ```bash
 npm ci
-npm run verify
+npm test
 ```
 
-Aucune preuve runtime n'est fabriquée. Le statut reste `UNVERIFIED_RUNTIME` tant que le smoke test Claude Code n'a pas réellement été exécuté.
+Le test `LOYALTY discounts items but never shipping` doit être rouge : l'implémentation calcule la remise sur 11 000 centimes au lieu des 10 000 centimes d'articles. Le total obtenu est **11 680** au lieu de **11 800**.
