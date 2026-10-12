@@ -6,10 +6,26 @@
       "status": "PASS"
     },
     {
-      "name": "baseline pricing keeps shipping outside the tax base",
+      "name": "checkout applies LOYALTY pricing end to end",
+      "status": "PASS"
+    },
+    {
+      "name": "STANDARD customer keeps baseline pricing",
+      "status": "PASS"
+    },
+    {
+      "name": "LOYALTY discounts items but never shipping",
+      "status": "PASS"
+    },
+    {
+      "name": "LOYALTY discount and tax do not depend on shipping",
+      "status": "PASS"
+    },
+    {
+      "name": "every amount stays an integer number of cents",
       "status": "PASS"
     }
   ],
-  "pass": 2,
+  "pass": 6,
   "fail": 0
 }

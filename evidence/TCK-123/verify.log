@@ -1,31 +1,20 @@
+
 > harness-lab@1.1.0 verify
 > node scripts/verify.mjs
 
 static validation: PASS
-TAP version 13
-# (node:3548) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
-# (Use `node --trace-warnings ...` to show where the warning was created)
-# Subtest: checkout delegates to domain pricing
-ok 1 - checkout delegates to domain pricing
-  ---
-  duration_ms: 0.597434
-  type: 'test'
-  ...
-# (node:3549) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
-# (Use `node --trace-warnings ...` to show where the warning was created)
-# Subtest: baseline pricing keeps shipping outside the tax base
-ok 2 - baseline pricing keeps shipping outside the tax base
-  ---
-  duration_ms: 1.111595
-  type: 'test'
-  ...
-1..2
-# tests 2
-# suites 0
-# pass 2
-# fail 0
-# cancelled 0
-# skipped 0
-# todo 0
-# duration_ms 138.924356
+✔ checkout delegates to domain pricing (0.778ms)
+✔ checkout applies LOYALTY pricing end to end (0.1533ms)
+✔ STANDARD customer keeps baseline pricing (1.3536ms)
+✔ LOYALTY discounts items but never shipping (0.1558ms)
+✔ LOYALTY discount and tax do not depend on shipping (0.1735ms)
+✔ every amount stays an integer number of cents (0.4595ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 159.6946
 verification complète : PASS
