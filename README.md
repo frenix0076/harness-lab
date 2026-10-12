@@ -1,20 +1,28 @@
-# harness-lab — checkpoint-08-professional
+# harness-lab
 
-Le fil rouge est corrigé. Le dépôt ajoute maintenant l'automatisation et l'exploitation professionnelle :
+Dépôt compagnon officiel de *Maîtriser le Harness Engineering*.
 
-- caller headless borné `scripts/run-ticket.mjs` ;
-- chargement explicite du profil sandbox du checkpoint 07 ;
-- tools intégrés restreints à `Read`, `Edit` et `Bash`, MCP refusés pour ce run ;
-- workflow `.github/workflows/harness-review.yml` ;
-- observabilité structurée ;
-- runbook incident/reprise ;
-- paquet de fermeture TCK-123.
+**Contrat pédagogique :** un tag représente l'état que le lecteur obtient après l'étape correspondante du livre. Les deux tags TCK-123 matérialisent explicitement le rouge puis le vert. `main` ajoute seulement la navigation et les documents de maintenance du compagnon.
 
 ```bash
+git clone https://github.com/frenix0076/harness-lab.git
+cd harness-lab
 npm ci
 npm test
 npm run verify
-node scripts/run-ticket.mjs TCK-123 --dry-run
+npm run verify:book
 ```
 
-Le dry-run expose le contrat sans contacter Claude Code. Les preuves Claude Code runtime et GitHub Actions distantes restent distinctes des vérifications locales et ne sont promues qu'après exécution réelle.
+Voir `BOOK_INDEX.md` pour le parcours complet.
+
+## États du cours
+
+`checkpoint-01-no-harness` → `checkpoint-02-minimal` → `checkpoint-03-runtime-structured` → `checkpoint-04-information-disciplined` → `checkpoint-05-capabilities` → `checkpoint-06-verified-orchestrated` → `checkpoint-07-secure` → `demo-tck-123-expected-failure` → `demo-tck-123-corrected` → `checkpoint-08-professional`.
+
+## Validation officielle du runtime
+
+Le contrat CLI/hook/sandbox a été revérifié contre la documentation Claude Code 2026. Voir `docs/maintainer/OFFICIAL_CLAUDE_CODE_VALIDATION_2026.md`. Cette vérification est statique : le smoke test authentifié reste une preuve séparée.
+
+## Preuves non simulées
+
+Les tests Node et le dry-run sont vérifiables localement. Les hooks/agents/sandbox Claude Code et GitHub Actions distantes ne sont déclarés PASS qu'après exécution réelle dans leurs environnements respectifs.

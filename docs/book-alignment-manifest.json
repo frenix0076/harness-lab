@@ -1,0 +1,14 @@
+{
+  "bookEdition": "2026",
+  "courseFinalTag": "checkpoint-08-professional",
+  "contracts": [
+    {"id":"CP01-NO-CUSTOMER-TYPE","checkpoint":"checkpoint-01-no-harness","path":"src/domain/types.ts","mustNotContain":["customerType","CustomerType","discountCents"]},
+    {"id":"CP02-PLAN-NO-FUTURE-SPOILER","checkpoint":"checkpoint-02-minimal","path":"docs/stories/TCK-123/plan.md","mustContain":["PriceInput","npm run verify"],"mustNotContain":["confondre `totalBeforeTax`","inclure la livraison dans la remise"]},
+    {"id":"CP05-HOOK","checkpoint":"checkpoint-05-capabilities","paths":[".claude/skills/plan/SKILL.md",".claude/hooks/post-edit-verify.mjs","docs/capabilities.md"]},
+    {"id":"CP06-EVIDENCE","checkpoint":"checkpoint-06-verified-orchestrated","paths":[".claude/agents/code-reviewer.md","evidence/TCK-123/tests.json","evidence/TCK-123/verify.log","evidence/TCK-123/review.md"]},
+    {"id":"CP07-SECURITY","checkpoint":"checkpoint-07-secure","paths":[".claude/settings.sandbox.json","docs/security.md","evidence/security/README.md"],"mustNotHavePaths":["scripts/run-ticket.mjs",".github/workflows/harness-review.yml"]},
+    {"id":"TCK-123-RED","checkpoint":"demo-tck-123-expected-failure","path":"src/domain/pricing.ts","mustContain":["Math.round(totalBeforeTax * 0.10)","discountedItemsCents"]},
+    {"id":"TCK-123-GREEN","checkpoint":"demo-tck-123-corrected","path":"src/domain/pricing.ts","mustContain":["Math.round(input.itemsSubtotalCents * 0.10)"],"paths":["evidence/TCK-123/tests.json","evidence/TCK-123/verify.log"]},
+    {"id":"CP08-PROFESSIONAL","checkpoint":"checkpoint-08-professional","paths":["scripts/run-ticket.mjs",".github/workflows/harness-review.yml","observability/schema.json","observability/events.jsonl","INCIDENT-RUNBOOK.md","evidence/TCK-123/closure.md"]}
+  ]
+}
