@@ -1,6 +1,6 @@
 # Progress — TCK-123
 
-status: READY_FOR_REVIEW
+status: CLOSED
 
 completed:
 - exploration
@@ -11,9 +11,9 @@ completed:
 - correction ciblée
 - régression conservée
 - vérification déterministe verte
+- review indépendante
+- paquet de fermeture produit
 
 failure: none
 
-next:
-- review indépendante
-- fermeture avec preuves
+next: none

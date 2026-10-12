@@ -1,25 +1,20 @@
 # Closure TCK-123
 
-## Change
-La remise LOYALTY porte uniquement sur les articles.
+## 1. Qu'est-ce qui a changé ?
+La remise `LOYALTY` porte uniquement sur le sous-total des articles. La livraison reste hors base de remise et la taxe est calculée après la remise sur les articles.
 
-## Truth
+## 2. Quelle Truth justifiait ce changement ?
 `docs/stories/TCK-123/spec.md`.
 
-## Evidence
-- `npm run verify` vert ;
-- régression "LOYALTY discounts items but never shipping" ;
-- cas STANDARD vert ;
-- état d'échec conservé dans l'historique au tag `demo-tck-123-expected-failure`.
+## 3. Quelles preuves sont vertes ?
+- `npm run verify` exécuté localement ;
+- `evidence/TCK-123/tests.json` : 3 tests PASS ;
+- régression `LOYALTY discounts items but never shipping` ;
+- cas `STANDARD` inchangé ;
+- revue statique de QA documentée dans `review.md`.
 
-## Failure encountered
-La première implémentation utilisait `totalBeforeTax`, qui incluait la livraison.
+## 4. Quelle erreur a été rencontrée et quelle régression la couvre ?
+L'état `demo-tck-123-expected-failure` calculait la remise sur `itemsSubtotalCents + shippingCents`. Il produisait 11 680 au lieu de 11 800. Le test de non-remise de la livraison reste dans la suite et empêche le retour de cette erreur.
 
-## Regression added
-Le test de non-remise de la livraison reste dans la suite.
-
-## Review
-Voir `review.md`.
-
-## Open risks
-Validation runtime Claude Code et CI distante hors de la preuve locale.
+## 5. Quels risques ou points ouverts restent ?
+Le sous-agent reviewer, le runtime Claude Code, son enforcement réel de permissions/sandbox et la CI GitHub distante ne sont pas prouvés par les tests Node locaux. Ils exigent des smoke tests dans leurs environnements réels.

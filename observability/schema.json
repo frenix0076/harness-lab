@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HarnessRunEvent",
+  "type": "object",
+  "required": [
+    "timestamp",
+    "run_id",
+    "ticket",
+    "event",
+    "status"
+  ],
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "ticket": {
+      "type": "string"
+    },
+    "event": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "turns": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "retries": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "verification_failures": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "human_corrections": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "input_tokens": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "output_tokens": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "cost": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

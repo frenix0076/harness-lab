@@ -1,0 +1,13 @@
+{
+  "ordered_tags": [
+    "checkpoint-01-no-harness",
+    "checkpoint-02-minimal",
+    "checkpoint-03-runtime-structured",
+    "checkpoint-04-information-disciplined",
+    "checkpoint-05-capabilities",
+    "checkpoint-06-verified-orchestrated",
+    "demo-tck-123-expected-failure",
+    "checkpoint-07-secure-automated",
+    "checkpoint-08-professional"
+  ]
+}

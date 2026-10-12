@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "name": "checkout delegates to domain pricing",
+      "status": "PASS"
+    },
+    {
+      "name": "STANDARD customer keeps baseline pricing",
+      "status": "PASS"
+    },
+    {
+      "name": "LOYALTY discounts items but never shipping",
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "todo": 0
+  }
+}

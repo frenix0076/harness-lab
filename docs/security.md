@@ -19,3 +19,11 @@ claude --settings .claude/settings.sandbox.json
 Dans la session, utilisez `/sandbox`, puis demandez à Claude d'exécuter `npm test`. Pour tester la frontière, demandez ensuite une écriture hors du répertoire de travail ou un accès réseau non autorisé : l'opération doit être bloquée par le confinement.
 
 Ce test runtime ne peut pas être remplacé par la seule validation JSON du fichier.
+
+## Références runtime vérifiées pour cette édition
+
+- Permissions : `https://code.claude.com/docs/en/permissions`
+- Sandbox : `https://code.claude.com/docs/en/sandboxing`
+- Mode headless : `https://code.claude.com/docs/en/headless`
+
+Le caller headless utilise `--permission-prompts none`, disponible à partir de Claude Code v2.1.259 selon la documentation actuelle.

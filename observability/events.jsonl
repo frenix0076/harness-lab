@@ -1,0 +1,2 @@
+{"timestamp":"2026-10-12T08:40:36Z","run_id":"local-replay-tck-123","ticket":"TCK-123","event":"verify_failed","status":"FAIL","source":"git-tag-replay","turns":null,"retries":0,"verification_failures":1,"human_corrections":0,"input_tokens":null,"output_tokens":null,"cost":null}
+{"timestamp":"2026-10-12T08:40:36Z","run_id":"local-replay-tck-123","ticket":"TCK-123","event":"verify_passed","status":"PASS","source":"git-tag-replay","turns":null,"retries":0,"verification_failures":1,"human_corrections":1,"input_tokens":null,"output_tokens":null,"cost":null}
