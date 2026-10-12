@@ -1,12 +1,13 @@
-# harness-lab — checkpoint-03-runtime-structured
+# harness-lab — checkpoint-04-information-disciplined
 
-Ce checkpoint ajoute les surfaces runtime minimales :
+Le dépôt sépare maintenant :
 
-- `.claude/settings.json` : configuration runtime ;
-- `.claude/rules/domain.md` : instruction ciblée par chemin ;
-- `CLAUDE.md` : instruction globale du projet.
+- Truth : `spec.md`, code et tests ;
+- State : `progress.md` ;
+- Memory : aucune mémoire persistante tant qu'aucun besoin réel ne la justifie ;
+- Context : instructions/rules et fichiers lus pour la décision courante.
 
-L'objectif est de distinguer **instruction**, **configuration** et **capacité** avant d'ajouter d'autres primitives.
+Voir `docs/information-model.md`.
 
 ```bash
 npm ci
