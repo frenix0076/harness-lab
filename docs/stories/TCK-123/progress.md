@@ -1,15 +1,22 @@
 # Progress — TCK-123
 
-status: READY_FOR_BUILD
+status: VERIFY_FAILED
 
 completed:
-- spec lue
-- plan établi
-- invariants identifiés
+- exploration
+- plan
+- gate humain documenté
+- implémentation initiale
 
-failure: none
+failure:
+- "LOYALTY discounts items but never shipping" rouge
+
+observed:
+- discount base = totalBeforeTax
+- totalBeforeTax inclut shipping
+- résultat = 11 680 au lieu de 11 800
 
 next:
-- passer le gate de plan
-- écrire la preuve déterministe LOYALTY
-- implémenter le delta minimal
+- utiliser itemsSubtotalCents comme base de remise
+- calculer la taxe sur discountedItemsCents uniquement
+- relancer verify
