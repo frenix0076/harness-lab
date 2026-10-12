@@ -1,10 +1,15 @@
-# harness-lab — checkpoint-06-verified-orchestrated
+# harness-lab — checkpoint-07-secure
 
-Une responsabilité réellement distincte apparaît : la revue indépendante. Elle est matérialisée par `.claude/agents/code-reviewer.md`, en lecture seule.
+Le dépôt ajoute maintenant les frontières de sécurité introduites dans la Partie 7 :
 
-Le dossier `evidence/TCK-123/` matérialise maintenant le paquet minimal **avant BUILD** : baseline vert, résultats structurés, diff summary, revue et gate de plan. TCK-123 n'est pas encore implémenté ; le dépôt refuse donc de fabriquer une preuve finale prématurée.
+- permissions projet déjà présentes dans `.claude/settings.json` ;
+- profil sandbox strict dans `.claude/settings.sandbox.json` ;
+- procédure de preuve dans `docs/security.md` ;
+- dossier `evidence/security/` pour le test négatif runtime.
 
 ```bash
 npm ci
 npm run verify
 ```
+
+Aucune preuve runtime n'est fabriquée. Le statut reste `UNVERIFIED_RUNTIME` tant que le smoke test Claude Code n'a pas réellement été exécuté.
