@@ -1,13 +1,8 @@
-# harness-lab — checkpoint-04-information-disciplined
+# harness-lab — checkpoint-05-capabilities
 
-Le dépôt sépare maintenant :
+Le premier besoin de procédure réutilisable introduit `.claude/skills/plan/SKILL.md`. La preuve déterministe reste `scripts/verify.sh`.
 
-- Truth : `spec.md`, code et tests ;
-- State : `progress.md` ;
-- Memory : aucune mémoire persistante tant qu'aucun besoin réel ne la justifie ;
-- Context : instructions/rules et fichiers lus pour la décision courante.
-
-Voir `docs/information-model.md`.
+Aucun hook, agent ou MCP n'est ajouté sans besoin : voir `docs/capabilities.md`.
 
 ```bash
 npm ci
