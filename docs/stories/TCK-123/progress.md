@@ -1,22 +1,21 @@
 # Progress — TCK-123
 
-status: VERIFY_FAILED
+status: VERIFIED
 
 completed:
 - exploration
 - plan
 - gate humain documenté
 - implémentation initiale
+- vérification rouge
+- diagnostic
+- correction de la base de remise
+- régression LOYALTY
+- suite complète verte
 
-failure:
-- "LOYALTY discounts items but never shipping" rouge
-
-observed:
-- discount base = totalBeforeTax
-- totalBeforeTax inclut shipping
-- résultat = 11 680 au lieu de 11 800
+failure_resolved:
+- la livraison était incluse dans la base de remise
 
 next:
-- utiliser itemsSubtotalCents comme base de remise
-- calculer la taxe sur discountedItemsCents uniquement
-- relancer verify
+- revue indépendante
+- fermeture avec paquet de preuves

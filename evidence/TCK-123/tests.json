@@ -6,10 +6,14 @@
       "status": "PASS"
     },
     {
-      "name": "baseline pricing keeps shipping outside the tax base",
+      "name": "STANDARD customer keeps baseline pricing",
+      "status": "PASS"
+    },
+    {
+      "name": "LOYALTY discounts items but never shipping",
       "status": "PASS"
     }
   ],
-  "pass": 2,
+  "pass": 3,
   "fail": 0
 }

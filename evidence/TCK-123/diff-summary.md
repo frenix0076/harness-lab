@@ -1,5 +1,8 @@
-# Diff summary TCK-123 — pré-BUILD
+# Diff summary TCK-123
 
-- aucune modification métier TCK-123 encore appliquée ;
-- Truth, plan, State et critères de preuve sont présents ;
-- le prochain delta introduira le type client, la remise et le test de régression.
+- ajout de `CustomerType` et `customerType` au moment où TCK-123 le justifie ;
+- ajout d'une remise de 10 % réservée au sous-total des articles pour `LOYALTY` ;
+- livraison explicitement hors base de remise ;
+- taxe calculée après remise sur les articles ;
+- comportement standard conservé ;
+- test rouge 11 680 → attendu 11 800, puis régression verte.
