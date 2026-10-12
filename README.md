@@ -1,14 +1,10 @@
-# harness-lab — checkpoint-03-runtime-structured
+# harness-lab — checkpoint-04-information-disciplined
 
-Le dépôt ajoute maintenant :
-
-- `.claude/settings.json` pour les permissions partagées ;
-- `.claude/rules/domain.md` pour une règle ciblée au pricing ;
-- une validation statique qui contrôle la présence et la syntaxe des surfaces déjà introduites.
+Le dépôt sépare explicitement Truth, State, Memory et Context.
 
 ```bash
 npm ci
 npm run verify
 ```
 
-Instruction et configuration runtime sont désormais séparées.
+Consultez `docs/information-model.md`. La mémoire persistante reste absente tant qu'aucune leçon réutilisable ne justifie sa création.
