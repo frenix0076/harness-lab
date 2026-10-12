@@ -13,7 +13,7 @@ Le projet est volontairement petit : il sert à rendre visibles les responsabili
 - Node.js **22.6+** ;
 - npm ;
 - Git ;
-- Bash pour `scripts/verify.sh` (Git Bash, WSL2, macOS ou Linux).
+- `npm run verify` fonctionne avec Node.js sous Windows, macOS et Linux.
 
 Aucune dépendance npm tierce n'est nécessaire.
 

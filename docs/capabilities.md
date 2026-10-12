@@ -5,7 +5,7 @@ Le dépôt introduit seulement les primitives dont un besoin est déjà visible.
 | Primitive | Implémentation | Pourquoi |
 |---|---|---|
 | Skill | `.claude/skills/plan/SKILL.md` | encapsuler une procédure de planification réutilisable |
-| Tool / commande | `scripts/verify.sh` | exécuter une preuve déterministe |
+| Tool / commande | `npm run verify` | exécuter une preuve déterministe multiplateforme |
 | Hook | non ajouté à ce checkpoint | aucun événement lifecycle ne justifie encore une réaction automatique |
 | Agent | non ajouté à ce checkpoint | la procédure de planification ne justifie pas encore un contexte indépendant |
 | MCP | non ajouté | aucune capacité externe n'est nécessaire au scénario |

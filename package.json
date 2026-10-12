@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "verify": "bash scripts/verify.sh"
+    "verify": "node scripts/verify.mjs"
   },
   "engines": {"node": ">=22.6.0"}
 }

@@ -55,5 +55,7 @@ try { parsed = JSON.parse(result.stdout); }
 catch { throw new Error("sortie Claude Code non JSON"); }
 if (!parsed.structured_output) throw new Error("structured_output absent");
 
-const verify = spawn("bash", ["scripts/verify.sh"], { stdio: "inherit" });
+const verify = spawn(process.execPath, ["scripts/verify.mjs"], {
+  stdio: "inherit",
+});
 verify.on("close", code => process.exit(code ?? 1));
