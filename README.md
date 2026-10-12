@@ -1,12 +1,10 @@
-# harness-lab — checkpoint-05-capabilities
+# harness-lab — checkpoint-06-verified-orchestrated
 
-Le premier besoin de procédure réutilisable introduit `.claude/skills/plan/SKILL.md`.
+Une responsabilité réellement distincte apparaît : la revue indépendante. Elle est matérialisée par `.claude/agents/code-reviewer.md`, en lecture seule.
 
-Le premier besoin de réaction automatique introduit aussi un vrai hook `PostToolUse` : après un `Edit` ou `Write` réussi, `.claude/hooks/post-edit-verify.mjs` relance la suite de tests. Le mécanisme est statiquement validé ici ; son déclenchement par Claude Code nécessite un runtime réel.
+Le dossier `evidence/TCK-123/` matérialise maintenant le paquet minimal **avant BUILD** : baseline vert, résultats structurés, diff summary, revue et gate de plan. TCK-123 n'est pas encore implémenté ; le dépôt refuse donc de fabriquer une preuve finale prématurée.
 
 ```bash
 npm ci
 npm run verify
 ```
-
-Aucun agent ou MCP n'est ajouté sans besoin : voir `docs/capabilities.md`.
