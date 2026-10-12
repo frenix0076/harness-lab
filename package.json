@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "verify": "node scripts/verify.mjs"
+    "verify": "node scripts/verify.mjs",
+    "evidence:tck-123": "node scripts/generate-evidence.mjs"
   },
   "engines": {"node": ">=22.6.0"}
 }
