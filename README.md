@@ -1,10 +1,12 @@
-# harness-lab — checkpoint-04-information-disciplined
+# harness-lab — checkpoint-05-capabilities
 
-Le dépôt sépare explicitement Truth, State, Memory et Context.
+Le premier besoin de procédure réutilisable introduit `.claude/skills/plan/SKILL.md`.
+
+Le premier besoin de réaction automatique introduit aussi un vrai hook `PostToolUse` : après un `Edit` ou `Write` réussi, `.claude/hooks/post-edit-verify.mjs` relance la suite de tests. Le mécanisme est statiquement validé ici ; son déclenchement par Claude Code nécessite un runtime réel.
 
 ```bash
 npm ci
 npm run verify
 ```
 
-Consultez `docs/information-model.md`. La mémoire persistante reste absente tant qu'aucune leçon réutilisable ne justifie sa création.
+Aucun agent ou MCP n'est ajouté sans besoin : voir `docs/capabilities.md`.
