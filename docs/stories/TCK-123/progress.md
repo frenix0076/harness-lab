@@ -1,20 +1,19 @@
 # Progress — TCK-123
 
-status: VERIFY_FAILED
+status: READY_FOR_REVIEW
 
 completed:
 - exploration
 - plan
-- implementation initiale
+- implémentation initiale
+- échec de vérification reproduit
+- cause identifiée
+- correction ciblée
+- régression conservée
+- vérification déterministe verte
 
-failure:
-- "LOYALTY discounts items but never shipping" rouge
-
-observed:
-- discount base = totalBeforeTax
-- totalBeforeTax inclut shipping
+failure: none
 
 next:
-- utiliser itemsSubtotalCents comme base de remise
-- calculer la taxe sur discountedItemsCents uniquement
-- relancer verify
+- review indépendante
+- fermeture avec preuves

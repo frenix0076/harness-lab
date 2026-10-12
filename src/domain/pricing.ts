@@ -1,9 +1,8 @@
 import type { PriceInput, PriceResult } from "./types.ts";
 
 export function price(input: PriceInput): PriceResult {
-  const totalBeforeTax = input.itemsSubtotalCents + input.shippingCents;
   const discountCents = input.customerType === "LOYALTY"
-    ? Math.round(totalBeforeTax * 0.10)
+    ? Math.round(input.itemsSubtotalCents * 0.10)
     : 0;
   const discountedItemsCents = input.itemsSubtotalCents - discountCents;
   const taxCents = Math.round(discountedItemsCents * input.taxRate);
@@ -12,6 +11,6 @@ export function price(input: PriceInput): PriceResult {
     shippingCents: input.shippingCents,
     discountCents,
     taxCents,
-    totalCents: discountedItemsCents + input.shippingCents + taxCents,
+    totalCents: discountedItemsCents + taxCents + input.shippingCents,
   };
 }

@@ -1,12 +1,17 @@
-# harness-lab — demo-tck-123-expected-failure
+# harness-lab — checkpoint-07-secure-automated
 
-État volontairement fautif du scénario TCK-123.
+Après la correction de TCK-123, le dépôt ajoute l'automatisation et les frontières de sécurité minimales :
+
+- permissions projet ;
+- profil sandbox strict séparé pour macOS/Linux/WSL2 ;
+- caller headless borné ;
+- workflow CI sans secret ;
+- séparation guidance / autorisation / confinement.
 
 ```bash
 npm ci
-npm test
+npm run verify
+node scripts/run-ticket.mjs TCK-123 --dry-run
 ```
 
-Le test `LOYALTY discounts items but never shipping` doit être **rouge** : l'implémentation applique 10 % de remise à 11 000 centimes au lieu des 10 000 centimes d'articles. Le total obtenu est 11 680 au lieu de 11 800.
-
-Cet échec métier est la preuve attendue. Un problème de tooling ou de dépendance n'est pas acceptable.
+Voir `docs/security.md`. Le dry-run ne contacte pas Claude Code.
