@@ -1,16 +1,14 @@
-# harness-lab — checkpoint-02-minimal
+# harness-lab — checkpoint-03-runtime-structured
 
-Le premier harness ajoute uniquement :
+Ce checkpoint ajoute les surfaces runtime minimales :
 
-- `CLAUDE.md` pour les instructions stables ;
-- `docs/stories/TCK-123/spec.md` comme Truth de tâche ;
-- `docs/stories/TCK-123/plan.md` comme plan minimal ;
-- les tests et `npm run verify` comme preuve externe au modèle.
+- `.claude/settings.json` : configuration runtime ;
+- `.claude/rules/domain.md` : instruction ciblée par chemin ;
+- `CLAUDE.md` : instruction globale du projet.
+
+L'objectif est de distinguer **instruction**, **configuration** et **capacité** avant d'ajouter d'autres primitives.
 
 ```bash
 npm ci
-npm test
 npm run verify
 ```
-
-Aucun sous-agent, hook, MCP ou système de mémoire n'est encore justifié.
